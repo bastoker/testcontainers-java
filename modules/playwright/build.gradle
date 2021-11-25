@@ -1,0 +1,15 @@
+description = "Testcontainers :: Playwright"
+
+dependencies {
+    api project(':testcontainers')
+
+    provided 'com.microsoft.playwright:playwright:1.16.0'
+    provided 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
+
+    testImplementation 'org.mortbay.jetty:jetty:6.1.26'
+    testImplementation project(':nginx')
+    testImplementation 'org.rnorth.visible-assertions:visible-assertions:2.1.2'
+
+    compileOnly 'org.jetbrains:annotations:22.0.0'
+    testCompileClasspath 'org.jetbrains:annotations:21.0.1'
+}
